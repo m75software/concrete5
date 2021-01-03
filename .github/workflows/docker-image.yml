@@ -15,4 +15,4 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         repository: m75software/concrete5
-        tags: m75software/concrete5:$GITHUB_REF
+        tag_with_ref: true
