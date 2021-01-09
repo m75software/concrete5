@@ -13,14 +13,14 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install zip
 
 # Download the source code
-ADD https://www.concrete5.org/download_file/-/view/111592/ /var/www/html/
+ADD https://www.concrete5.org/download_file/-/view/113632/ /var/www/html/
 
 # Extract the source code and clean up
 RUN cd /var/www/html \
-    && unzip concrete5-8.5.2.zip \
-    && mv concrete5-8.5.2/* . \
-    && rm -rf concrete5-8.5.2 \
-    && rm concrete5-8.5.2.zip \
+    && unzip concrete5-8.5.4.zip \
+    && mv concrete5-8.5.4/* . \
+    && rm -rf concrete5-8.5.4 \
+    && rm concrete5-8.5.4.zip \
     && chown -R www-data:www-data /var/www/html/
 
 EXPOSE 80
